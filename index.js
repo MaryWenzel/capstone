@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use("/recipes", recipesRouter);
 
 app.get("/", (req, res) => {
-  res.send("backend says hello!");
+  res.send("Welcome to my server for fooooooooooood!");
 });
 
 app.listen(port, () => console.log(`Example app running on port ${port}`));
