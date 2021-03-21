@@ -4,7 +4,8 @@
   "description": "capstone app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js",
+    "dev": "NODE_ENV=development nodemon ./index.js",
+    "start": "NODE_ENV=production nodemon ./index.js",
     "test": "test"
   },
   "repository": {

@@ -12,6 +12,11 @@ class Connection {
         database: "recipes",
       });
 
+      if (process.env.NODE_ENV === `production` && process.env.CLOUD_INSTANCE) {
+        console.log(`connect socket: ${process.env.CLOUD_INSTANCE}`);
+        config.socketPath = `/cloudsql/${process.env.CLOUD_INSTANCE}`;
+      }
+
       return this.pool;
     }
 
