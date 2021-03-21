@@ -4,6 +4,9 @@
   "description": "capstone app",
   "main": "index.js",
   "scripts": {
+    "webpack:client": "webpack --config webpack.client.js --watch",
+    "webpack:server": "webpack --config webpack.server.js --watch",
+    "webpack:start": "nodemon --watch build --exec node build/bundle.js",
     "dev": "NODE_ENV=development nodemon ./index.js",
     "start": "NODE_ENV=production nodemon ./index.js",
     "test": "test"
