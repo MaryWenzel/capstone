@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const recipesRouter = require("./server/routes/recipes");
+const usersRouter = require("./server/routes/users");
 
 const app = express();
 
@@ -9,6 +10,7 @@ const port = process.env.PORT || 4000;
 
 app.use(bodyParser.json());
 app.use("/recipes", recipesRouter);
+app.use("/users", usersRouter);
 
 app.get("/", (req, res) => {
   res.send("Welcome to my server for fooooooooooood!!");
